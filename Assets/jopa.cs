@@ -7,6 +7,6 @@ public class jopa : MonoBehaviour
 {
 void OnTriggerEnter (Collider other) 
 	{
-	SceneManager.LoadScene ("SCENE inside");
+	SceneManager.LoadScene ("SCENE inside 1");
 }
 }

@@ -1,0 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnitySc
+
+public class Jopa7 : MonoBehaviour
+{
+void OnTriggerEnter (Collider other) 
+	{
+	SceneManager.LoadScene ("SCENE main 3");
+}
+}
