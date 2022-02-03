@@ -7,6 +7,7 @@ public class jopa : MonoBehaviour
 {
 void OnTriggerEnter (Collider other) 
 	{
-	SceneManager.LoadScene ("SCENE inside 1");
-}
+		if (other.gameObject.tag == "Player")
+			SceneManager.LoadScene ("SCENE inside 1");
+	}
 }
