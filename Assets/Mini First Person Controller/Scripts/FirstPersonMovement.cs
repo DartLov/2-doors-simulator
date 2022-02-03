@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FirstPersonMovement : MonoBehaviour
 {
+    public float hp = 1;
+
     public float speed = 5;
 
     [Header("Running")]
@@ -40,5 +43,18 @@ public class FirstPersonMovement : MonoBehaviour
 
         // Apply movement.
         rigidbody.velocity = transform.rotation * new Vector3(targetVelocity.x, rigidbody.velocity.y, targetVelocity.y);
+    }
+    private void OnTriggerEnter(Collider other) {
+        if(other.gameObject.tag == "Death")
+        {
+            hp -= 1f;
+        }
+        if(hp < 0.01f)
+        {
+        Destroy(gameObject);
+        }
+    }
+    private void Death()
+    {
     }
 }
