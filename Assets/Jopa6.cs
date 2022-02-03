@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Jopa6 : MonoBehaviour
 {
-void OnTriggerEnter (Collider other) 
+	void OnTriggerEnter (Collider other)
 	{
-	SceneManager.LoadScene ("SCENE gachi 1");
-}
+		if (other.gameObject.tag == "Player")
+			SceneManager.LoadScene ("SCENE gachi 1");
+	}
 }
