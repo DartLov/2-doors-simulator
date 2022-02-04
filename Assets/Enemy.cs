@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
    private Transform _player;
    public float dist;
    NavMeshAgent nav;
-   public float Radius = 30;
+   public float Radius = 999;
    public void Init(Transform player)
    {
 	   _player = player;
